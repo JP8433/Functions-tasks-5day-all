@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = (a) => {
+            var output = [];
+            for (var i = 0; i < (a.length); i++) {
+        
+                var y = a[i].toString().split("")
+        
+                for (var x = (y.length); x > 0; x--) {
+        
+                    if ((y[x - 1]) == (y[y.length - x])) {
+                        if (x == 1) {
+                            output.push(a[i]);
+                        }
+                    } else {
+                        break;
+                    }
+                }
+            }
+            return output;
+        
+        }
+        var a = arr(["1221","madam","sequence","teacher","Jay"])
+        console.log(a);
+        
+
+    </script>
+</body>
+
+</html>

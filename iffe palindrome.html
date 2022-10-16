@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     ( function(intArray)   {
+        replicaArray = [];
+        for (let i = 0; i < intArray.length; i++) {
+          reverseStr = ReverseString2(intArray[i]);
+          if (intArray[i] == reverseStr){
+            replicaArray.push(intArray[i])
+          }
+        }
+   
+        for (let i = 0; i < replicaArray.length; i++) {
+          console.log(replicaArray[i])
+        }
+        
+        function ReverseString2(str){
+          out = ""
+          for(let i=str.length-1 ; i >= 0  ; i--){
+            out = out.concat(str[i])
+          }
+          return out
+        }
+    }
+   )(["madam","defed","amay","jayaj"]); 
+    </script>
+</body>
+</html>
